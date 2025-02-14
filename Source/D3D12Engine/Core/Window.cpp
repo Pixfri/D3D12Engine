@@ -2,7 +2,7 @@
 // This file is part of D3D12Engine.
 // For conditions of distribution and use, see copyright notice in LICENSE.
 
-#include <D3D12Engine/Window.hpp>
+#include <D3D12Engine/Core/Window.hpp>
 
 #include <D3D12Engine/Application.hpp>
 

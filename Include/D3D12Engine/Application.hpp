@@ -9,11 +9,14 @@
 
 
 #include <D3D12Engine/pch.hpp>
-#include <D3D12Engine/StepTimer.hpp>
-#include <D3D12Engine/Window.hpp>
+#include <D3D12Engine/Core/StepTimer.hpp>
+#include <D3D12Engine/Core/Window.hpp>
+#include <D3D12Engine/RHI/Vertex.hpp>
+#include <D3D12Engine/RHI/VertexBuffer.hpp>
 
 #include <directxtk12/Keyboard.h>
 #include <directxtk12/Mouse.h>
+
 
 namespace D3D12Engine {
     constexpr uint32_t g_ScreenWidth = 1280;
@@ -52,10 +55,14 @@ namespace D3D12Engine {
         ComPtr<ID3D12Resource> m_RenderTargets[FrameCount];
         ComPtr<ID3D12CommandAllocator> m_CommandAllocator;
         ComPtr<ID3D12CommandQueue> m_CommandQueue;
+        ComPtr<ID3D12RootSignature> m_RootSignature;
         ComPtr<ID3D12DescriptorHeap> m_RtvHeap;
         ComPtr<ID3D12PipelineState> m_PipelineState;
         ComPtr<ID3D12GraphicsCommandList> m_CommandList;
         UINT m_RtvDescriptorSize;
+
+        // App resources.
+        std::unique_ptr<VertexBuffer<VertexPosColor>> m_VertexBuffer;
 
         // Application timer.
         StepTimer m_Timer;

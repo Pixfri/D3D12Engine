@@ -22,3 +22,6 @@
 /vsxmake2022/
 /.vs/
 /*/.vs/
+
+# Nsight Project
+/D3D12Engine-NSight/

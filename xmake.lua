@@ -19,7 +19,7 @@ end
 
 set_encodings("utf-8")
 set_exceptions("cxx")
-set_languages("cxx20")
+set_languages("cxx23")
 set_rundir("./bin/$(plat)_$(arch)_$(mode)")
 set_targetdir("./bin/$(plat)_$(arch)_$(mode)")
 set_warnings("allextra")

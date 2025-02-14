@@ -32,6 +32,6 @@ namespace D3D12Engine {
     };
 }
 
-#include <D3D12Engine/Window.inl>
+#include <D3D12Engine/Core/Window.inl>
 
 #endif // DE_WINDOW_HPP
